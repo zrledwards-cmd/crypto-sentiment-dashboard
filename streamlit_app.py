@@ -299,6 +299,7 @@ def render_coin_tab(coin):
         options=sorted(coin_df_full['datetime'].dt.date.unique()),
         value=(min_d, max_d),
         label_visibility="collapsed",
+        key=f"date_range_{coin}",
     )
     coin_df = coin_df_full[
         (coin_df_full['datetime'].dt.date >= d1) &
